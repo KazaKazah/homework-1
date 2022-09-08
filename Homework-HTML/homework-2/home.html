@@ -1,0 +1,138 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // задание 1
+        // let age = prompt('How old are you?', 0);
+        // if (age >= 0 && age < 12) {
+        //     console.log('Ты ребенок');
+        // }
+        // else if (age >= 12 && age < 18) {
+        //     console.log('Ты подросток');
+        // }
+        // else if (age >= 18 && age < 60) {
+        //     console.log('Ты взрослый');
+        // }
+        // else if (age >= 60) {
+        //     console.log('Ты  пенсионер');
+        // }
+
+        // задание 2
+        let number = prompt('Введите свои числа от 1 до 9', 0);
+        switch (number) {
+            case '0':
+                console.log('0 is )');
+                break;
+            case '1':
+                console.log('1 is !');
+                break;
+            case '2':
+                console.log('2 is @');
+                break;
+            case '3':
+                console.log('3 is #');
+                break;
+            case '4':
+                console.log('4 is $');
+                break;
+            case '5':
+                console.log('5 is %');
+                break;
+            case '6':
+                console.log('6 is ^');
+                break;
+            case '7':
+                console.log('7 is &');
+                break;
+            case '8':
+                console.log('8 is *');
+                break;
+            case '9':
+                console.log('9 is (');
+                break;
+        }
+
+        // задание 3
+        let a = prompt('Enter the number from 100 to 999', 0);
+        number = number + '';
+        if (number[0] == number[1] || number[0] == number[2] || number[1] == number[2]) {
+            alert('TRUE');
+        }
+        else
+            alert('FALSE');
+
+        // задание 4
+        let year = prompt('Enter any year', 0);
+        if (year % 4 == 0 && year % 100 !== 0) {
+            alert('Leap year');
+        }
+        else
+            alert('Not Leap Year');
+
+        // задание 5
+        let numbera = prompt('Enter the number from 10000 to 99999', 0);
+        number = number + '';
+        if (number === number.split('').reverse().join(''))
+            alert('palindrome');
+        else
+            alert('NOT palindrome');
+
+        // задание 6
+        let amount = prompt('Enter the amount of USD:', 0);
+        let currency = prompt('EUR = 1, UAH = 2, AZN = 3', 0);
+        switch (currency) {
+            case '1':
+                console.log(amount * 0.89 + 'EUR');
+                break;
+            case '2':
+                console.log(amount * 25.90 + 'UAH');
+                break;
+            case '3':
+                console.log(amount * 1.69 + 'AZN');
+                break;
+        }
+
+        // задание 7
+        let amounte = prompt('Enter the value of purchase:');
+        if (amount >= 200 && amount < 300)
+            alert(amount / 100 * 97 + '$ with 3% discount');
+        else if (amount >= 300 && amount < 500)
+            alert(amount / 100 * 95 + '$ with 5% discount');
+        else if (amount >= 500)
+            alert(amount / 100 * 93 + '$ with 7% discount');
+
+
+        // задание 8
+
+
+        
+        // задание 9
+        let capital = prompt('What is the capital of Kazahstan? 1 - Astana 2 - Almaty 3 - Atyrau');
+        let currencyc = prompt('What is the currency of the KZ? 1 - KZ 2 - USA 3 - RUB');
+        let country = prompt('What is the most populated country? 1 - the USA 2 - Japan 3 - China');
+        let score = 0;
+        if (capital == 1)
+            score += 2;
+        if (currency == 1)
+            score += 2;
+        if (country == 3)
+            score += 2;
+        alert('Your score is ' + score);
+
+        // задание 10
+        let date = prompt('Enter the date - day-month-year ');
+        date = date.split('-');
+        let oldDate = new Date(date[2], date[1] - 1, date[0]); //месяцы начинаются с 0
+        oldDate.setDate(oldDate.getDate() + 1);
+        alert(oldDate);
+    </script>
+</body>
+
+</html>
