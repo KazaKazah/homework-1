@@ -8,6 +8,8 @@
 </head>
 
 <body>
+    <button id="b06">Калькулятор</button>
+
     <script>
         // task1
         var a = prompt()
@@ -21,6 +23,115 @@
         alert(sum)
 
         // task2
+        var gcd = function (a, b) {
+            if (!b) {
+                return a;
+            }
+
+            return gcd(b, a % b);
+        };
+
+        // task3
+        var number = 15;
+        for (var i = 1; i <= number; i++) {
+            if (number % i == 0 && number == !number && number == !1) {
+                console.log(i);
+            }
+        }
+
+        // task4
+        function Digits(n) {
+            for (var i = 0; n > 1; i++) {
+                n /= 10;
+            }
+            return i;
+        }
+
+        // task5
+        function chek() {
+            let a = 0, b = 0, c = 0;
+            let num1;
+            for (let i = 0; i < 10; i++) {
+                num1 = parseInt(prompt("Введите " + (i + 1) + " чисел= "))
+                if (num1 > 0) {
+                    a++;
+                } else
+                    if (num1 === 0) {
+                        c++;
+                    } else
+                        if (num1 < 0) {
+                            b++;
+                        }
+            }
+            alert("Количество положительных: " + a);
+            alert("Количество отрицательных: " + b);
+            alert("Количество нулей: " + c);
+            return 0;
+        }
+
+        // task6
+        var b06 = document.getElementById("b06");
+        b06.onclick = function () {
+            do {
+                var a = +prompt('input your first number');
+                var b = +prompt('input your second number');
+                var i = prompt('chose:  - + / *');
+
+                switch (i) {
+                    case '+':
+                        alert(a + b);
+                        break;
+                    case '-':
+                        alert(a - b);
+                        break;
+                    case '/':
+                        alert(a / b);
+                        break;
+                    case '*':
+                        alert(a * b);
+                    default:
+                        break;
+                }
+
+            } while (confirm('do you want another chance?'));
+        }
+
+        // task7
+        let str = prompt("input your number^ ");
+        let k = prompt("what num you slice?");
+
+        console.log(str.replace(RegExp("(\\d{" + k + "})(\\d*)$"), "$2$1"));
+
+
+        // task8
+        const days = ['MN', 'TH', 'WN', 'ST', 'FR', 'ST', 'SN'];
+        let currDay = 0;
+
+        while (confirm(`${days[currDay]}. can you see what day?`)) {
+            currDay = (currDay + 1) % days.length;
+        }
+
+        // task9
+        var result = 'x ';
+        for (var i = 1; i < 10; i++) {
+            for (var j = 1; j < 10; j++) {
+
+                if (i == 0 && j > 0) {
+                    result += '[' + j + ']';
+                }
+                else if (j == 0 && i > 0) {
+                    result += '[' + i + '] ';
+                }
+                else if (i > 0 && j > 0) {
+                    result += (i * j) + ' ';
+                }
+            }
+            result += '\n'
+        }
+        console.log(result);
+
+    // task10
+    
     </script>
 </body>
 
