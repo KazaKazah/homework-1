@@ -1,0 +1,85 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <form name="form">
+        Точка1: <input type="text" size=5 name="x1"><input type="text" size=5 name="y1">
+        <hr>
+        Точка2: <input type="text" size=5 name="x2"><input type="text" size=5 name="y2">
+        <hr>
+        <input type="button" value=Вычислить
+            onclick="care(document.form.x1.value, document.form.y1.value, document.form.x2.value, document.form.y2.value)">
+    </form>
+
+
+    <script>
+        // task1
+        var a = number(prompt("frist"));
+        var b = number(prompt("second"));
+
+
+
+
+        //task2
+        alert(factorial(5));
+        function factorial(n) {
+            result = n;
+            for (let i = n - 1; i > 1; --i) {
+                result *= i;
+            }
+            return result;
+        }
+
+        //task3
+        var value = "" + 5 + 6;
+        alert(value);
+
+        // task4
+        function care(x1, y1, x2, y2) {
+            var a = x1 > x2 ? x1 - x2 : x2 - x1;
+            var b = y1 > y2 ? y1 - y2 : y2 - y1;
+            var s = a * b;
+            document.write("Площадь прямоугольника равна ", s);
+            return s;
+        }
+
+        //task5
+        var n = parseInt(prompt("Введите натуральноечисло", 6));
+        var sum = n - 1;
+        var temp = n;
+
+        for (var i = 2; n > 1;) {
+            if (!(n % i)) {
+                sum -= i;
+                n = n / i;
+            } else i++;
+        }
+
+        if (!sum)
+            alert("Число: " + temp + " является совершенным");
+        else
+            alert("Число: " + temp + " не является совершенным");
+
+        
+        // task6
+
+
+        // task7
+
+        // task8
+
+        // task9
+
+        // task10
+    </script>
+</body>
+
+</html>
