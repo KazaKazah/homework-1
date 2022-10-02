@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // task 1
+        console.log(Array.from({ length: 100 },
+            (v, i) => i + ': ' + textNumber(i)
+        ).join('\n'));
+
+        function textNumber(number) {
+            const dict = [
+                ['ноль', 'один', 'два', 'три', 'четыре', 'пять', 'шесть', 'семь', 'восемь', 'девять', 'десять', '', 'две', '', 'четыр', 'пят', 'шест', 'сем', 'восем', 'девят'],
+                ['', '', 'двадцать', 'тридцать', 'сорок', '', '', '', '', 'девяносто']
+            ];
+            if (number >= 0 && number <= 10)
+                return dict[0][number];
+            if (number > 10 && number <= 19)
+                return (dict[0][number] || dict[0][number - 10]) + 'надцать';
+            if (number >= 20 && number <= 99) {
+                const [units = 0, tens] = [...('' + number)].reverse().map(Number);
+                return [
+                    tens ? dict[1][tens] || (dict[0][tens] + 'десят') : '',
+                    units ? dict[0][units] : ''
+                ].join(' ');
+            }
+        }
+
+        // task 2
+        function replaceLetter(str) {
+            let result = "";
+            for (let i = 0; i < str.length; i++) {
+                let c = str[i];
+                result += c === c.toUpperCase() ? c.toLowerCase() : c.toUpperCase();
+            }
+            return result;
+        }
+
+        // task3
+        
+    </script>
+</body>
+
+</html>
